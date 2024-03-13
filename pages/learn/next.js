@@ -1,7 +1,7 @@
-export default function NextLearn() {
+export default function Fram() {
   return (
     <>
-    <h1>Hello</h1>
+    <h1>Fram Museum</h1>
     <p>lorem ipsum dolor si amet...</p>
     </>
   )

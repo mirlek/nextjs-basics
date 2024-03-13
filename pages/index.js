@@ -41,15 +41,27 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <Link href="/learn/next" className={styles.card}>
+        <Link href="/learn/react" className={styles.card}>
           <h2>
-            Learn Next.js <span>-&gt;</span>
+          Vigeland Sculpture Park <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
         </Link>
-        <Link href="/learn/react" className={styles.card}>
+        <Link href="/learn/angular" className={styles.card}>
           <h2>
-            Learn about React <span>-&gt;</span>
+          The Norwegian Opera and Ballet Theater <span>-&gt;</span>
+          </h2>
+          <p>Find in-depth information about Next.js features and API.</p>
+        </Link>
+        <Link href="/learn/next" className={styles.card}>
+          <h2>
+          Fram Museum <span>-&gt;</span>
+          </h2>
+          <p>Find in-depth information about Next.js features and API.</p>
+        </Link>
+        <Link href="/learn/vue" className={styles.card}>
+          <h2>
+          Akershus Fortress <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
         </Link>

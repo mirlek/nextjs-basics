@@ -5,14 +5,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div>
-          <nav>
             <ul>
-
+              <Link href="/">Home</Link>
+              <Link href="/contacts">Contacts</Link>
             </ul>
-            <li>
-
-            </li>
-          </nav>
          {children}
         </div>
       </body>

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import RootLayout from "@/components/layout";
 
 export default function Home() {
   return (
+    <RootLayout>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -67,5 +69,6 @@ export default function Home() {
         </Link>
       </div>
     </main>
+    </RootLayout>
   );
 }

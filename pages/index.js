@@ -7,39 +7,18 @@ export default function Home() {
   return (
     <RootLayout>
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
+    <div>
+    <h1>OSLO</h1>
+    </div>
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/oslo.jpg"
+          alt="OsloPic"
+          width={1098}
+          height={680}
           priority
-        />
+                  />
       </div>
 
       <div className={styles.grid}>
@@ -72,3 +51,6 @@ export default function Home() {
     </RootLayout>
   );
 }
+
+
+const API_KEY = 'f8768aadf583429c9ba0e34781adef19'

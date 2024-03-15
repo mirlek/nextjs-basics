@@ -5,14 +5,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div>
-          <nav>
-            <ul>
-
+            <ul className="navigation">
+              <Link href="/">Home</Link>
+              <Link href="/contacts">Contacts</Link>
+              <Link href={"/news/top-stories"}> Top Stories</Link>
+              <Link href={"/news/popular"}> Popular</Link>
             </ul>
-            <li>
-
-            </li>
-          </nav>
          {children}
         </div>
       </body>

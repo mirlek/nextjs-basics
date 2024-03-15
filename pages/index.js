@@ -2,8 +2,31 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import RootLayout from "@/components/layout";
+import { useState } from "react";
+import { useRouter } from "next/router"
+
 
 export default function Home() {
+  const links = [
+    {
+      title: "Top Stories", 
+      desc: "Read articles currently on the homepage of the New York Times",
+      path: "/top-stories"
+    }, 
+    {
+      title: "Popular", 
+      desc: "Read the most popular articles on the New York Times",
+      path: "/popular"
+    }
+  ];
+  const [query, getQuery] = useState();
+  const router = useRouter();
+  const handleOnChange = e => getQuery(e.target.value);
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    router.push(`/search/${query}`)
+  }
+
   return (
     <RootLayout>
     <main className={styles.main}>
@@ -47,10 +70,25 @@ export default function Home() {
           <p>Find in-depth information about Next.js features and API.</p>
         </Link>
       </div>
+      <div>
+      <h1>New York Times NEWS</h1>
+      <form onSubmit={handleOnSubmit}>
+        <input type="text" onChange={handleOnChange} />
+      </form>
+      </div>
+      <div className={styles.grid}>
+          {links.map(link => {
+            return( 
+            <Link key={link.path} href={`news/${link.path}`} className={styles.card}>
+                <h2>{link.title} &rarr;</h2>
+                <p>{link.desc}</p>
+            </Link>)
+          })}
+         
+        </div>
     </main>
     </RootLayout>
   );
 }
 
 
-const API_KEY = 'f8768aadf583429c9ba0e34781adef19'

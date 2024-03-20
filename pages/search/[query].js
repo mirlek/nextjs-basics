@@ -1,16 +1,16 @@
-import Layout from "../../components/Layout"
+import RootLayout from "@/components/layout"
 import { search } from "../api"
 
-export default function News({ results }) {
+export default function SearchQuery({ results }) {
     return(
-      <Layout>
+      <RootLayout>
         <h1>Results from the search: {results.query}</h1>
         <ul>
             {results.map(result => {
               return(<li key={result.uri}><a href={result.url} target="_blank" rel="noopener norefferer">{result.title}</a></li>)
             })}
         </ul>
-      </Layout>
+      </RootLayout>
     )
 }
 

@@ -11,12 +11,12 @@ export default function Home() {
     {
       title: "Top Stories", 
       desc: "Read articles currently on the homepage of the New York Times",
-      path: "/top-stories"
+      path: "top-stories"
     }, 
     {
       title: "Popular", 
       desc: "Read the most popular articles on the New York Times",
-      path: "/popular"
+      path: "popular"
     }
   ];
   const [query, getQuery] = useState();
@@ -29,6 +29,7 @@ export default function Home() {
 
   return (
     <RootLayout>
+      <div>
     <main className={styles.main}>
     <div>
     <h1>OSLO</h1>
@@ -49,25 +50,21 @@ export default function Home() {
           <h2>
           Vigeland Sculpture Park <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
         </Link>
         <Link href="/learn/angular" className={styles.card}>
           <h2>
           The Norwegian Opera and Ballet Theater <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
         </Link>
         <Link href="/learn/next" className={styles.card}>
           <h2>
           Fram Museum <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
         </Link>
         <Link href="/learn/vue" className={styles.card}>
           <h2>
           Akershus Fortress <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
         </Link>
       </div>
       <div>
@@ -87,6 +84,7 @@ export default function Home() {
          
         </div>
     </main>
+    </div>
     </RootLayout>
   );
 }

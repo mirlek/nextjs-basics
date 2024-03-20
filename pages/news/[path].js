@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { handler } from "../api";
 import RootLayout from '@/components/layout';
 
-function News({ results, title }) {
+export default function News({ results, title }) {
   return (
     <RootLayout>
       <Head>
@@ -60,4 +60,3 @@ export async function getStaticProps({ params }) {
       }
   }
 }
-export default News;
